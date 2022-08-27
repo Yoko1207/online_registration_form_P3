@@ -9,14 +9,73 @@
   <link rel="stylesheet" type="text/css" href="css/style.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Nunito&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Markazi+Text:wght@400;500;700&display=swap" rel="stylesheet">
 </head>
 <body>
 
   <form action="index.html" method="post">
+    <h1>THE CODE REVIEW</h1>
+    <h2>Signup for our newsletter</h2>
+    <p>Get the latest news on how your code is doing right in your inbox</p>
+    
+    <fieldset>
+      <legend>Contact Information</legend>
 
+      <label for="name">Full Name</label>
+      <input type="text" id="name" name="user_name">
+
+      <label for="mail">Email Address</label>
+      <input type="email" id="mail" name="user_email">
+
+      <label for="phone">Phone Number</label>
+      <input type="tel" id="phone" name="user_phone">
+
+      <label for="address">Street Address</label>
+      <input type="address" id="address" name="user_address">
+
+      <label for="address">City</label>
+      <input type="address" id="address" name="user_address">
+
+      <label for="address">State</label>
+      <input type="address" id="address" name="user_address">
+
+      <label for="address">Zip <Code></Code></label>
+      <input type="address" id="address" name="user_address">
+    </fieldset>
+
+    <fieldset>
+      <legend>Newsletter</legend>
+      <legend>Select the newsletters you would like to receive</legend>
+
+      <input type="checkbox" id="html" vale="html_newsletter" name="user_newsletter">
+      <label class="box" for="html">HTML News</label>
+
+      <input type="checkbox" id="css" vale="css_newsletter" name="user_newsletter">
+      <label class="box" for="css">CSS News</label>
+
+      <input type="checkbox" id="javascript" vale="javascript_newsletter" name="user_newsletter">
+      <label class="box" for="javascript">Javascript News</label>
+
+
+
+    <label>Newsletter format</label>
+    <input type="radio" id="html" value="html" name="newsletter_format">
+    <label for="html" class="box">HTML</label>
+
+    <input type="radio" id="plain_text" value="plain_text" name="newsletter_format">
+    <label for="plain_text" class="box">Plain text</label>
+
+    <label for="topic">Other topics you'd like to hear about</label>
+    <textarea name="user_topic" id="topic"></textarea>
+
+  </fieldset>
+
+  <button type="submit">Sign Up</button>
 
   </form>
+
+  <footer><p>Copyright The Code Review</p></footer>
+
 </body>
 </html>
 

@@ -5,8 +5,74 @@
 }
 
 body {
-  font-family: 'Nunito', sans-serif;
-  color: #384047;
+  font-family: 'Markazi Text', serif;
+  color: #2D3945;
+  font-size: 62.5%;
+}
+
+h1 {
+  padding: .7em 0;
+  font-size: 1.7rem;
+  background-color: #2D3945;
+  color: white;
+  font-weight: normal;  
+}
+
+h1,
+h2,
+form p {
+  text-align: center;
+}
+
+h2 {
+  padding: .8em 0 .3em;
+}
+
+h2,
+legend {
+  font-size: 1.6rem;
+  font-weight: 500;
+}
+
+form {
+  margin: 0 auto;
+}
+
+form p {
+  position: relative;
+  font-size: 1.3rem;
+  padding: 0 .8em 1.7em;
+  color: #BABFC4;
+  line-height: .9;
+  font-weight: normal;
+  border-bottom: solid 4px #2D3945;
+  margin: 0 auto 1.2em;
+  width: 92%;
+}
+
+form p::after {
+  display: block;
+  position: absolute;
+  content: "";
+  width: 100%;
+  height: 2px;
+  background-color: #2D3945;
+  bottom: -12%;
+  left: 0;
+}
+
+legend {
+  font-size: 1.7rem;
+  padding: 0 .53em;
+  margin-right: auto;
+}
+
+fieldset {
+  border: none;
+}
+
+form {
+
 }
 
 
