@@ -5,7 +5,7 @@
 }
 
 * {
-	box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 body {
@@ -46,7 +46,6 @@ legend {
 
 form {
   margin: 0 auto;
- 
 }
 
 form p,
@@ -57,7 +56,7 @@ fieldset {
 
 form p {
   font-size: .9rem;
-  padding: 0 .3em 2.7em;
+  padding: 0 .3em 3em;
   color: #BABFC4;
   line-height: 1.3;
   font-weight: normal;
@@ -65,26 +64,24 @@ form p {
   font-family: 'Noto Serif', serif;
 }
 
-legend:first-of-type::before {
+fieldset legend:not(.sub-title)::before {
   display: block;
   position: absolute;
   content: "";
   width: 100%;
   height: 3.2px;
   background-color: #2D3945;
-  top: -14%;
+  top: -13%;
   left: 0;
 }
 
 legend {
   position: relative;
-  font-size: 1.rem;
   margin-right: auto;
-  padding: .8em 0 0;
-width: 100%;
+  padding: .6em 0 0;
+  width: 100%;
   border-top: 2px solid #2D3945;
   display: block;
-
 }
 
 label {
@@ -93,7 +90,7 @@ label {
   font-family: 'Noto Serif', serif;
   display: block;
   margin: 1em auto .7em 0;
-  color: #728799;
+  color: #526474;
 }
 
 input[type="text"],
@@ -123,39 +120,40 @@ input[type="email"]::placeholder {
 }
 
 select {
-color: #BABFC4;
+  color: #BAB5C4;
 }
 
 option:first-child {
   display: none;
 }
 
-
 textarea {
   resize: none;
   height: 6em;
   margin-top: 1em;
+  margin-bottom: 2em;
 }
 
 /* Zip Code */
-input[type="address"]:last-of-type {
+.last input[type="text"] {
   width: 50%;
 }
 
-input:focus {
-  outline: 1px solid #2D3945;
+input:focus,
+select:focus,
+textarea:focus {
+  outline: 2px solid #2D3945;
 }
 
 fieldset {
   border: none;
-  padding-bottom: 3em;
   margin: 0 auto;
 }
 
 .sub-legend {
   display: block;
   font-size: .9rem;
-  color: #728799;
+  color: #526474;
   margin: 1em 0;
   font-family: 'Noto Serif', serif;
   line-height: 1.7;
@@ -197,7 +195,10 @@ label:nth-child(10) {
 /* "Other topic you'd like to hear about" */
 label:last-child {
   margin-bottom: 1.1em;
-  color: red;
+}
+
+.last {
+  margin-bottom: 3.2em;
 }
 
 footer p {
@@ -208,64 +209,58 @@ footer p {
   margin-bottom: 14.5em;
 }
 
-/* .box {
-  display: inline;
-  margin-left: .4em;
-  width: 100%;
-} */
-
 @media screen and (min-width: 768px) {
 
- form h1 {
+  form h1 {
     width: 100%;
   }
 
-fieldset {
-  max-width: 600px;
-  width: 
-}
+  fieldset,
+  button {
+    max-width: 600px;
+  }
 
-h2 {
-  padding: 1.5em 0 .1em;
-  font-size: 2.3rem;
-}
+  h2 {
+    padding: 1.5em 0 .1em;
+    font-size: 2.3rem;
+  }
 
-form p {
-  padding-bottom: 3.5em;
-}
+  form p {
+    padding-bottom: 3.5em;
+  }
 
-label {
-  margin-top: 2.3em;
+  legend {
+    padding-top: 1.4em;
+  }
 
-}
+  fieldset legend:not(.sub-title)::before {
+    top: -12%;
+  }
 
-.test {
-  display: flex;
-}
+  .row {
+    display: flex;
+    margin-bottom: 1.5em;
+  }
 
-.test label {
-  flex: 2 34%;
-}
+  .row label {
+    width: 25%;
+    margin-right: 0;
+  }
 
-input[type="text"],
-input[type="email"],
-input[type="tel"],
-input[type="address"],
-textarea,
-select {
-  
-  display: inline;
-}
+  .row:first-of-type {
+    margin-top: 2em;
+  }
 
-legend {
-  padding: 1.6em 0 0;
-}
+  .row input[type="text"]:not(.last input),
+  .row input[type="email"],
+  .row input[type="tel"],
+  .row select {
+    width: 75%;
+  }
 
-
-legend:first-of-type::before {
-
-  top: -12%;
-  left: 0;
-}
-
+  /* Zip Code */
+  .last input[type="text"]:last-of-type {
+    width: 25%;
+    margin-bottom: 2em;
+  }
 }
